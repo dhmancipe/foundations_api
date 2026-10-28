@@ -9,6 +9,9 @@ class Foundation(models.Model):
     sector = models.CharField(max_length=100)
     location = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField(blank=True)
+    phone = models.CharField(max_length=30, blank=True)
+    description = models.TextField(blank=True)
 
     class Meta:
         ordering = ["name"]
